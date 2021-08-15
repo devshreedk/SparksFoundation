@@ -1,0 +1,17 @@
+/*@import url('https://fonts.googleapis.com/css?family=Sofia');
+.nav-link{
+    margin-right: 15px;
+    color: coral;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.navbar-brand{
+    color: #F8485E;
+    letter-spacing: 1px;
+}
+h2{
+    color: grey;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace ;
+}
