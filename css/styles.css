@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    
+background-image: url("../img/b3.jpg") ;
+background-repeat: no-repeat;
+background-size: cover;
+  
+overflow: hidden;
+}
+
+.footer{
+    background:#dc3545;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+    color:white;
+}
+
+.footer p{
+margin:0;
+padding: 0.5rem 0;
+overflow: hidden;
+}
+
+
+.navbar{
+    overflow: hidden !important;
+}

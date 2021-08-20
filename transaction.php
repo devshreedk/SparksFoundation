@@ -6,12 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
 
 </head>
@@ -38,7 +36,7 @@
     }
 
     $result1 = mysqli_fetch_all($result1);
- 
+
     ?>
 
     <h2 class="text-center display-4 p-3"> <?php echo $row['Name'] ?> </h2>
@@ -54,7 +52,7 @@
                 <select id="user" name="to_user" class="form-select" aria-label="Default select example">
                     <option selected>Open this select menu</option>
                     <?php foreach ($result1 as $row) { ?>
-                    <option value="<?php echo $row[0] ?>"><?php echo $row[1] ?></option>
+                        <option value="<?php echo $row[0] ?>"><?php echo $row[1] ?></option>
                     <?php   }  ?>
                 </select> <br>
 
@@ -70,7 +68,7 @@
 
         </form>
     </div>
-
+    <?php include("footer.php"); ?>
 </body>
 
 </html>

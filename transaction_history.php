@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Transfer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="./css/styles.css">
+
+   
 </head>
 
 <body>
@@ -23,9 +24,9 @@
     include 'navbar.php';
     ?>
 
-    <div class="row">
-        <div class="col">
-            <table class="table table-striped table-hover">
+    <div class="row mt-3 transaction-history">
+       
+            <table class="table table-striped table-hover  table-light w-75">
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
@@ -37,22 +38,22 @@
                     <?php while ($row = $result->fetch_assoc()) { ?>
 
 
-                    <tr>
-                        <td class="py-2 text-center"><?php echo $row['id'] ?></td>
-                        <td class="py-2 text-center"><?php echo $row['from_user'] ?></td>
-                        <td class="py-2 text-center"><?php echo $row['to_user'] ?></td>
-                        <td class="py-2 text-center"><?php echo $row['amount'] ?></td>
+                        <tr>
+                            <td class="py-2 text-center"><?php echo $row['id'] ?></td>
+                            <td class="py-2 text-center"><?php echo $row['from_user'] ?></td>
+                            <td class="py-2 text-center"><?php echo $row['to_user'] ?></td>
+                            <td class="py-2 text-center"><?php echo $row['amount'] ?></td>
 
-                    </tr>
+                        </tr>
                     <?php } ?>
                 </thead>
             </table>
-        </div>
+      
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <?php include("footer.php"); ?>
 </body>
 
 </html>

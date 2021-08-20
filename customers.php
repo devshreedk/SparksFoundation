@@ -58,20 +58,20 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <style type="text/css">
-    button {
-        border: none;
-        background: coral;
-    }
+        button {
+            border: none;
+            background: coral;
+        }
 
-    button:hover {
-        background-color: #FF4848;
-        transform: scale(1.1);
-        color: white;
-    }
+        button:hover {
+            background-color: #FF4848;
+            transform: scale(1.1);
+            color: white;
+        }
     </style>
 
 </head>
@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
         //$rows = mysqli_fetch_assoc($result);
         ?>
 
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover  table-light">
 
             <tr>
                 <th class="text-center">ID</th>
@@ -105,24 +105,24 @@ if (isset($_POST['submit'])) {
             <?php while ($row = $result->fetch_assoc()) { ?>
 
 
-            <tr>
-                <td class="py-2 text-center"><?php echo $row['UID'] ?></td>
-                <td class="py-2 text-center"><?php echo $row['Name'] ?></td>
-                <td class="py-2 text-center"><?php echo $row['Email'] ?></td>
-                <td class="py-2 text-center"><?php echo $row['balance'] ?></td>
-                <td class="py-2 text-center">
-                    <a class="btn btn-outline-primary"
-                        href="/devshree/transaction.php?userId=<?php echo $row['UID'] ?>">Transfer
-                        Amount
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td class="py-2 text-center"><?php echo $row['UID'] ?></td>
+                    <td class="py-2 text-center"><?php echo $row['Name'] ?></td>
+                    <td class="py-2 text-center"><?php echo $row['Email'] ?></td>
+                    <td class="py-2 text-center"><?php echo $row['balance'] ?></td>
+                    <td class="py-2 text-center">
+                        <a class="btn btn-outline-primary" href="/devshree/transaction.php?userId=<?php echo $row['UID'] ?>">Transfer
+                            Amount
+                        </a>
+                    </td>
+                </tr>
 
             <?php } ?>
 
         </table>
 
     </div>
+    <?php include("footer.php"); ?>
 </body>
 
 </html>
